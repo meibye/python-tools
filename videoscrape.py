@@ -53,7 +53,7 @@ for opt, arg in opts:
     elif opt in ('-i', '--ifile'):
         videoURL = arg
     else:
-        print('Unkown command option ', opt)
+        print('Unknown command option ', opt)
 if videoURL == '':
     usage()
     print ('Missing -i input option')
@@ -71,7 +71,7 @@ if envShow:
         print('{k:25s}: {v:s}'.format(k=e, v=os.environ[e]))
 
 #
-# Test whether crhomedriver as a service has been requested
+# Test whether chromedriver as a service has been requested
 #
 if chromeService:
     print('chromedriver as a service is currently not supported!')
@@ -79,7 +79,8 @@ if chromeService:
 print('Video URL: ', videoURL)
 
 #
-# Add the requirement to load the "Safari Books Online Video Downloader" extension (id: ihgjlggckknakenjhgmfgaoalflhfihl)
+# Add the requirement to load the "Safari Books Online Video Downloader" extension
+# (id: ihgjlggckknakenjhgmfgaoalflhfihl)
 #
 from selenium.webdriver.chrome.options import Options
 chrome_options = Options()
@@ -92,7 +93,7 @@ from selenium import webdriver
 try:
     driver = webdriver.Chrome(chrome_options=chrome_options)
 except Exception as err:
-    print ('Exception')
+    print('Exception')
     print(err)
     raise SystemExit(2)
 
